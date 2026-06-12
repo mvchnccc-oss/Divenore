@@ -75,7 +75,7 @@ export default function Pricing() {
           based on your specific requirements.
         </motion.p>
 
-        <div className="grid md:grid-cols-3 gap-8 mt-20">
+        <div className="grid md:grid-cols-3 gap-8 mt-20 items-stretch">
           {plans.map((plan, i) => (
             <motion.div
               key={i}
@@ -83,7 +83,7 @@ export default function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: i * 0.1 }}
               viewport={{ once: true }}
-              className={`rounded-3xl p-10 border ${
+              className={`flex h-full flex-col justify-between rounded-3xl p-10 border ${
                 plan.highlight
                   ? "bg-[#111827] border-[#1D9E75]"
                   : "bg-[#0f1629] border-gray-800"
