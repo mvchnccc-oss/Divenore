@@ -10,13 +10,13 @@ export default function HomeCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="max-w-4xl mx-auto text-center bg-[#111827] border border-gray-800 rounded-3xl p-16"
+          className="max-w-4xl mx-auto text-center bg-[#111827] border border-gray-800 rounded-3xl p-10 sm:p-16"
         >
           <span className="text-[#1D9E75] uppercase tracking-widest font-semibold">
             Free Consultation
           </span>
 
-          <h2 className="text-4xl md:text-5xl font-bold mt-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-6 break-words whitespace-normal leading-tight">
             Start Your Digital Transformation Today
           </h2>
 

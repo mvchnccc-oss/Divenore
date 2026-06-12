@@ -59,14 +59,8 @@ export default function Navbar() {
             </NavLink>
           </div>
 
-          {/* Mobile CTA + toggle */}
-          <div className="flex items-center justify-between gap-3 md:hidden">
-            <NavLink
-              to={cta.path}
-              className="inline-flex items-center justify-center flex-1 rounded-full border border-[#1D9E75] bg-[#1D9E75] px-4 py-2 text-sm font-semibold text-black transition hover:bg-white hover:text-black"
-            >
-              {cta.label}
-            </NavLink>
+          {/* Mobile toggle */}
+          <div className="flex justify-end md:hidden">
             <button
               type="button"
               onClick={() => setOpen(!open)}
@@ -95,7 +89,7 @@ export default function Navbar() {
         <ul
           className={`text-white space-y-3 mt-3 overflow-hidden transition-all duration-700 ease-in-out ${
             open
-              ? "max-h-60 opacity-100 translate-y-0"
+              ? "max-h-96 opacity-100 translate-y-0"
               : "max-h-0 opacity-0 translate-y-8"
           }`}
         >
@@ -116,6 +110,15 @@ export default function Navbar() {
               </NavLink>
             </li>
           ))}
+          <li>
+            <NavLink
+              onClick={() => setOpen(false)}
+              to={cta.path}
+              className="block rounded-full border border-[#1D9E75] bg-[#1D9E75] px-4 py-3 text-center text-sm font-semibold text-black transition hover:bg-white hover:text-black"
+            >
+              {cta.label}
+            </NavLink>
+          </li>
         </ul>
       </div>
     </nav>
