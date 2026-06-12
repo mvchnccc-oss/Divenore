@@ -8,17 +8,17 @@ export default function Footer() {
     <footer className="bg-[#0b1120] text-gray-300">
       {/* Top CTA */}
       <div className="container max-w-7xl mx-auto px-6 py-16 border-b border-gray-800">
-        <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+        <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <h2 className="text-3xl md:text-4xl font-bold text-white">
             Ready to modernize your IT?
           </h2>
-          <div className="flex w-full lg:w-auto gap-3">
+          <div className="flex w-full flex-col gap-3 md:w-auto md:flex-row md:items-center">
             <input
               type="email"
               placeholder="Enter your work email..."
-              className="flex-1 lg:w-80 bg-[#111827] px-5 py-4 outline-none border border-gray-700 focus:border-[#1D9E75] transition"
+              className="w-full md:w-80 bg-[#111827] px-5 py-4 outline-none border border-gray-700 focus:border-[#1D9E75] transition"
             />
-            <button className="bg-[#1D9E75] hover:bg-white hover:text-black duration-500 px-6 py-4 font-semibold text-white">
+            <button className="w-full bg-[#1D9E75] hover:bg-white hover:text-black duration-500 px-6 py-4 font-semibold text-white md:w-auto">
               Get Free Consultation
             </button>
           </div>
@@ -68,7 +68,7 @@ export default function Footer() {
             <span className="text-xl font-bold text-white">Divenore</span>
           </div>
 
-          <ul className="flex gap-6 text-sm uppercase tracking-wide">
+          <ul className="grid w-full grid-cols-3 gap-4 text-center text-sm uppercase tracking-wide md:flex md:items-center md:gap-6">
             {["Home", "Services", "Solution", "Pricing", "Contact"].map(
               (item) => (
                 <li key={item}>

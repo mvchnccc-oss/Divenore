@@ -59,29 +59,35 @@ export default function Navbar() {
             </NavLink>
           </div>
 
-          {/* Mobile toggle */}
-          <div className="flex items-center gap-2 md:hidden">
+          {/* Mobile CTA + toggle */}
+          <div className="flex items-center justify-between gap-3 md:hidden">
             <NavLink
               to={cta.path}
-              className="text-[#1D9E75] font-semibold"
+              className="inline-flex items-center justify-center flex-1 rounded-full border border-[#1D9E75] bg-[#1D9E75] px-4 py-2 text-sm font-semibold text-black transition hover:bg-white hover:text-black"
             >
               {cta.label}
             </NavLink>
-            <svg
+            <button
+              type="button"
               onClick={() => setOpen(!open)}
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="size-6 cursor-pointer"
+              className="inline-flex items-center justify-center rounded-full border border-gray-600 p-3 text-white"
+              aria-label="Toggle menu"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
-              />
-            </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+                />
+              </svg>
+            </button>
           </div>
         </div>
 
